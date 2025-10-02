@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WISE - IELTS Computer-Based Exam Center</title>
-    <!-- Load Tailwind CSS -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind to use the Inter font and new colors -->
+    
     <script>
         tailwind.config = {
             theme: {
@@ -15,9 +15,9 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'wise-primary': '#1D4ED8', // Primary Blue (Student Portal, Logo Text)
-                        'wise-red': '#DC2626', // Primary Red (Teacher Portal)
-                        'wise-light': '#EFF6FF', // Light blue background
+                        'wise-primary': '#1D4ED8', 
+                        'wise-red': '#DC2626', // Primary Red 
+                        'wise-light': '#EFF6FF', 
                         'wise-gray': '#4B5563', // Text/Secondary
                     }
                 }
@@ -40,7 +40,7 @@
             transform: translateY(-3px);
         }
         
-        /* Style for file input */
+        
         .file-input {
             display: block;
             width: 100%;
@@ -62,7 +62,7 @@
             color: #1D4ED8; 
         }
 
-        /* Animation Styles */
+        
         .fade-in-section {
             opacity: 0;
             transform: translateY(30px); 
@@ -73,7 +73,7 @@
             transform: translateY(0);
         }
 
-        /* Logo Animation */
+        
         @keyframes checkDraw { to { stroke-dashoffset: 0; } }
         .wise-logo-check path {
             stroke-dasharray: 1000; 
@@ -84,7 +84,7 @@
         .logo-button:hover .logo-text { transform: scale(1.02); opacity: 0.95; }
         .logo-text { transition: all 0.3s ease-in-out; transform-origin: left center; }
 
-        /* Loading Spinner */
+        
         @keyframes spinner { to { transform: rotate(360deg); } }
         .loading-spinner {
             display: inline-block;
@@ -95,7 +95,7 @@
             animation: spinner .6s linear infinite;
         }
 
-        /* --- MODAL STYLES --- */
+        
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -131,7 +131,7 @@
 </head>
 <body class="min-h-screen flex flex-col antialiased">
 
-    <!-- Navigation Bar -->
+    
     <nav class="bg-white shadow-md sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
@@ -163,12 +163,12 @@
         </div>
     </nav>
 
-    <!-- Main Content Area -->
+    
     <main id="app-container" class="flex-grow flex flex-col items-center p-4 sm:p-8">
-        <!-- Content will be rendered here by JavaScript -->
+       
     </main>
 
-    <!-- Footer -->
+    
     <footer class="bg-wise-primary/5 border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left text-sm text-gray-600 space-y-3 md:space-y-0">
@@ -183,7 +183,7 @@
     </footer>
 
     <script>
-        // --- Core Application State & Navigation ---
+        
         let currentPage = 'home';
         const appContainer = document.getElementById('app-container');
 
@@ -361,9 +361,9 @@
                     </div>
                 </div>
             `;
-        };
+         };
         
-        const createTeacherSignupForm = () => {
+      const createTeacherSignupForm = () => {
             const primaryColorClass = 'text-wise-red';
             const buttonBgClass = 'bg-wise-red hover:bg-red-700';
             const focusRingClass = 'focus:ring-wise-red focus:border-wise-red';
@@ -380,7 +380,7 @@
                                     <div class="mb-4"><label for="t_email" class="block text-sm font-medium text-gray-700 mb-1">Email (Required)</label><input type="email" id="t_email" name="t_email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg ${focusRingClass} transition duration-150" placeholder="professional@example.com"></div>
                                     <div class="mb-4"><label for="t_password" class="block text-sm font-medium text-gray-700 mb-1">Password (Required)</label><div class="relative"><input type="password" id="t_password" name="t_password" required class="w-full px-4 py-3 border border-gray-300 rounded-lg ${focusRingClass} transition duration-150" placeholder="••••••••"><button type="button" class="password-toggle absolute inset-y-0 right-0 px-3 flex items-center text-gray-400 hover:text-gray-600"><svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg></button></div></div>
                                     <div class="mb-6"><label for="t_confirm_password" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password (Required)</label><div class="relative"><input type="password" id="t_confirm_password" required class="w-full px-4 py-3 border border-gray-300 rounded-lg ${focusRingClass} transition duration-150" placeholder="••••••••"><button type="button" class="password-toggle absolute inset-y-0 right-0 px-3 flex items-center text-gray-400 hover:text-gray-600"><svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg></button></div></div>
-                                </div>
+                       </div>
                                 <div>
                                     <h3 class="text-xl font-semibold text-wise-gray mb-4 border-b pb-2">Academic Credentials</h3>
                                     <div class="mb-4">
@@ -410,7 +410,7 @@
         const createDashboard = (type, userName) => {
             const isStudent = type === 'Student';
             
-            if (isStudent) {
+             if (isStudent) {
                 return `
                     <div class="w-full max-w-5xl">
                         <header class="bg-white p-6 rounded-t-xl shadow-lg border-b-4 border-blue-500 flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -438,7 +438,6 @@
                 `;
             }
 
-            // --- Enhanced Teacher Dashboard ---
             return `
                 <div class="w-full max-w-6xl">
                     <header class="bg-white p-6 rounded-t-xl shadow-lg border-b-4 border-red-500 flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -728,4 +727,5 @@
     </script>
 </body>
 </html>
+
 
