@@ -15,7 +15,7 @@ WISE is a web-based IELTS exam center platform where students can practice IELTS
   - Monitor student performance  
 
 - **General**  
-  - Responsive interface with HTML, CSS, and JavaScript  
+  - Responsive interface .
   - Easy to customize and extend  
   - Clean and modern UI  
 
